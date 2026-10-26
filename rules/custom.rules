@@ -1,0 +1,5 @@
+#ICPM (Ping Flood / Reconnaissance) Detect Rule
+alert icpm any any -> any any (msg:"[Attack Detected] High Volume ICMP/Ping Traffic"; sid:1000001; rev:1;)
+
+#HTTP Port Scan
+alert tcp any any -> any 108 (msg:"[RECON DETECTED] HTTP Port Access Attempt"; std:1000002; rev:1;)
